@@ -12,7 +12,7 @@ function Navbar() {
 
         {/* Nav links */}
         <ul className="flex items-center gap-6 font-normal bg-gray-200 rounded px-4 ml-25 py-1 hover:font-semibold">
-          <li className="flex items-center gap-1 px-3 py-1 rounded-md hover:bg-white  transition-colors duration-150 cursor-pointer">
+          <li className="flex items-center gap-1 px-3 py-1 rounded-md bg-white hover:bg-white  transition-colors duration-150 cursor-pointer">
             <Home size={16} />
             Home
           </li>

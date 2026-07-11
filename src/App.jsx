@@ -1,18 +1,18 @@
-// import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Navbar from "./Components/Navbar";
-// import Account from "./Components/Account";
-// import Home from "./Components/Home";
+import Hero from "./Components/Hero";
+import Who from "./Components/Who";
+import Review from "./Components/Review";
 
 
 function App() {
   return (
-    // <BrowserRouter>
-    //    <Routes>
-    //     <Route path="/" element={<Home />} />
-    //     <Route path="/account" element={<Account />} />
-    //   </Routes>
-    // </BrowserRouter>
-    <Navbar />
+    <>
+      <Navbar />
+      <Hero />
+      <Who />
+      <Review />
+    </>
   );
 }
 
