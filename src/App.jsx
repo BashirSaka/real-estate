@@ -7,6 +7,9 @@ import Categories from "./Components/Categories";
 import RecentProject from "./Components/RecentProject";
 import ViewAll from "./Components/ViewAll";
 import Feedback from "./Components/Feedback";
+import Resourses from "./Components/Resourses";
+import Cta from "./Components/Cta";
+import Footer from "./Components/Footer";
 
 
 function App() {
@@ -20,6 +23,9 @@ function App() {
       <RecentProject />
       <ViewAll />
       <Feedback />
+      <Resourses />
+      <Cta />
+      <Footer />
     </>
   );
 }

@@ -1,6 +1,6 @@
 
 import stHero from "../assets/stHero.jpg";
-import Penthouse from "../assets/Penthouse.jpg";
+import Penthouse from "../assets/project5.jpg";
 import { Home } from "lucide-react";
 
 function Hero() {
