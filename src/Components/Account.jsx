@@ -1,12 +1,21 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Eye, EyeOff } from "lucide-react";
 
 function Account() {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate();
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-50 pt-10">
+    <div className="flex justify-center items-center min-h-screen bg-gray-50 pt-10 px-4">
       <div className="w-full max-w-md bg-white rounded-2xl shadow-lg p-8">
+        <p
+          onClick={() => navigate("/")}
+          className="text-sm font-medium text-indigo-600 cursor-pointer w-fit mb-6"
+        >
+          ← Back to home page
+        </p>
+
         <h1 className="text-3xl font-bold mb-2">Create an account</h1>
         <p className="text-gray-500 mb-6">
           Access your tasks, notes, and projects anytime, anywhere — and keep

@@ -2,22 +2,25 @@ import rdpenthouse from "../assets/rdpenthouse.jpg";
 
 function Who() {
   return (
-    <section className="px-8 py-10 flex gap-8">
+    <section
+      className="px-4 sm:px-8 py-10 flex flex-col lg:flex-row gap-8"
+      id="about"
+    >
       {/* Left column: tag + image */}
-      <div className="w-1/3 relative">
+      <div className="w-full lg:w-1/3 relative">
         <span className="inline-block border rounded-full px-4 py-1.5 text-sm font-medium mb-4">
           Who we are
         </span>
         <img
           src={rdpenthouse}
           alt="Modern house"
-          className="w-full h-[220px] object-cover rounded-2xl"
+          className="w-full h-[220px] sm:h-[280px] lg:h-[220px] object-cover rounded-2xl"
         />
       </div>
 
       {/* Right column: heading + paragraph + button */}
-      <div className="w-2/3 flex flex-col justify-between pl-10">
-        <p className="text-3xl font-semibold leading-snug">
+      <div className="w-full lg:w-2/3 flex flex-col justify-between lg:pl-10">
+        <p className="text-xl sm:text-2xl lg:text-3xl font-semibold leading-snug break-words">
           Discover your ideal property investment property Restive. Connect with
           buyers,{" "}
           <span className="text-gray-400 font-normal">

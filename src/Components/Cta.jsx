@@ -38,66 +38,68 @@ function Cta() {
   };
 
   return (
-    <section className="mt-14 px-8">
-      <div className="relative w-full h-[420px] rounded-2xl overflow-hidden">
+    <section className="mt-8 sm:mt-14 px-3 sm:px-6 lg:px-8" >
+      <div className="relative w-full h-[320px] sm:h-[380px] lg:h-[420px] rounded-2xl overflow-hidden">
         <img
           src={HouseImg}
           alt="Modern property"
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <h2 className="text-white text-4xl font-semibold">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 sm:px-6">
+          <h2 className="text-white text-2xl sm:text-3xl lg:text-4xl font-semibold leading-snug">
             Ready to make your <br /> property a reality?
           </h2>
-          <p className="text-white text-sm mt-4 max-w-md">
+          <p className="text-white text-xs sm:text-sm mt-3 sm:mt-4 max-w-md">
             Experience urban sophistication in this modern apartment featuring
             open-plan living, floor sophistication.
           </p>
-          <div className="flex gap-4 mt-6">
-            <button className="bg-white text-black text-sm font-medium px-5 py-2.5 rounded-full">
+          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-5 sm:mt-6 w-full sm:w-auto">
+            <button className="bg-white text-black text-sm font-medium px-5 py-2.5 rounded-full cursor-pointer">
               Get Started Now
             </button>
-            <button className="border border-white text-white text-sm font-medium px-5 py-2.5 rounded-full">
+            <button className="border border-white text-white text-sm font-medium px-5 py-2.5 rounded-full cursor-pointer hover:bg-black">
               Book a call
             </button>
           </div>
         </div>
       </div>
 
-      <div className="flex justify-between items-start mt-16">
-        <p className="font-semibold text-4xl">
+      <div className="flex flex-col sm:flex-row sm:justify-between items-start gap-3 sm:gap-4 mt-10 sm:mt-16">
+        <p className="font-semibold text-2xl sm:text-3xl lg:text-4xl">
           Frequently asked <br /> questions
         </p>
-        <p className="text-sm text-gray-600 max-w-sm text-right">
+        <p className="text-sm text-gray-600 max-w-sm sm:text-right">
           Experience urban sophistication in this modern apartment featuring
           open-plan living, floor sophistication in this modern apartment
           featuring
         </p>
       </div>
 
-      <div className="flex flex-col gap-3 mt-8">
+      <div className="flex flex-col gap-3 mt-6 sm:mt-8">
         {faqs.map((faq, index) => {
           const isOpen = openIndex === index;
           return (
             <div
               key={index}
-              className={`rounded-xl px-6 py-4 cursor-pointer transition-colors ${
+              className={`rounded-xl px-4 sm:px-6 py-4 cursor-pointer transition-colors ${
                 isOpen ? "bg-black text-white" : "bg-gray-50 text-black"
               }`}
               onClick={() => toggleFaq(index)}
             >
-              <div className="flex justify-between items-center">
-                <p className="text-sm">
-                  <span className="text-gray-400 mr-3">
+              <div className="flex justify-between items-center gap-3">
+                <p className="text-sm min-w-0">
+                  <span className="text-gray-400 mr-2 sm:mr-3">
                     {String(index + 1).padStart(2, "0")}.
                   </span>
                   {faq.question}
                 </p>
-                {isOpen ? <X size={18} /> : <Plus size={18} />}
+                <span className="shrink-0">
+                  {isOpen ? <X size={18} /> : <Plus size={18} />}
+                </span>
               </div>
               {isOpen && (
-                <p className="text-sm text-gray-300 mt-3 pl-8 max-w-lg">
+                <p className="text-sm text-gray-300 mt-3 pl-0 sm:pl-8 max-w-lg">
                   {faq.answer}
                 </p>
               )}

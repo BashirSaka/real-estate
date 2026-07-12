@@ -1,32 +1,21 @@
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import Hero from "./Components/Hero";
-import Who from "./Components/Who";
-import Review from "./Components/Review";
-import Categories from "./Components/Categories";
-import RecentProject from "./Components/RecentProject";
-import ViewAll from "./Components/ViewAll";
-import Feedback from "./Components/Feedback";
-import Resourses from "./Components/Resourses";
-import Cta from "./Components/Cta";
+import Home from "./Components/Home";
+import Account from "./Components/Account";
+import AddListing from "./Components/AddListing";
 import Footer from "./Components/Footer";
-
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Navbar />
-      <Hero />
-      <Who />
-      <Review />
-      <Categories />
-      <RecentProject />
-      <ViewAll />
-      <Feedback />
-      <Resourses />
-      <Cta />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/account" element={<Account />} />
+        <Route path="/add-listing" element={<AddListing />} />
+      </Routes>
       <Footer />
-    </>
+    </BrowserRouter>
   );
 }
 

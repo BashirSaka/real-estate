@@ -30,7 +30,7 @@ function RecentProject() {
   const activeProjects = tab === "Buying" ? buyingProjects : sellingProjects;
 
   return (
-    <section className="px-8 py-4">
+    <section className="px-8 py-4" id="listing">
       <p className="text-sm font-medium text-gray-500 tracking-wide">
         WHAT WE OFFER
       </p>

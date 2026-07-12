@@ -42,10 +42,12 @@ function Feedback() {
   };
 
   return (
-    <section className="text-center px-8 py-8">
-      <p className="text-5xl font-medium pb-8 pt-12">Our Customer Saying</p>
+    <section className="text-center px-3 sm:px-6 lg:px-8 py-8">
+      <p className="text-3xl sm:text-4xl lg:text-5xl font-medium pb-6 sm:pb-8 pt-8 sm:pt-12">
+        Our Customer Saying
+      </p>
 
-      <div className="flex justify-center gap-4 mb-8">
+      <div className="flex justify-center gap-3 sm:gap-4 mb-6 sm:mb-8">
         {testimonials.map((testimonial, index) => (
           <img
             key={index}
@@ -54,34 +56,36 @@ function Feedback() {
             onClick={() => setActiveIndex(index)}
             className={`rounded-full object-cover cursor-pointer transition-all ${
               index === activeIndex
-                ? "w-16 h-16 ring-2 ring-black"
-                : "w-12 h-12 opacity-60"
+                ? "w-12 h-12 sm:w-16 sm:h-16 ring-2 ring-black"
+                : "w-9 h-9 sm:w-12 sm:h-12 opacity-60"
             }`}
           />
         ))}
       </div>
 
-      <div className="flex items-center justify-center gap-8 max-w-3xl mx-auto">
+      <div className="flex items-center justify-center gap-3 sm:gap-6 lg:gap-8 max-w-3xl mx-auto">
         <button
           onClick={handlePrev}
-          className="shrink-0 border rounded-full p-3 hover:bg-gray-100 transition-colors"
+          className="shrink-0 border rounded-full p-2 sm:p-3 hover:bg-gray-100 transition-colors"
         >
-          <ChevronLeft size={20} />
+          <ChevronLeft size={18} />
         </button>
 
-        <div>
-          <p className="text-lg text-gray-700 leading-relaxed">
+        <div className="min-w-0">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed">
             {current.quote}
           </p>
-          <p className="mt-6 font-semibold">{current.name}</p>
-          <p className="text-sm text-gray-500">{current.title}</p>
+          <p className="mt-4 sm:mt-6 font-semibold text-sm sm:text-base">
+            {current.name}
+          </p>
+          <p className="text-xs sm:text-sm text-gray-500">{current.title}</p>
         </div>
 
         <button
           onClick={handleNext}
-          className="shrink-0 border rounded-full p-3 hover:bg-gray-100 transition-colors"
+          className="shrink-0 border rounded-full p-2 sm:p-3 hover:bg-gray-100 transition-colors"
         >
-          <ChevronRight size={20} />
+          <ChevronRight size={18} />
         </button>
       </div>
     </section>
