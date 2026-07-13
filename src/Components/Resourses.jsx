@@ -1,7 +1,7 @@
 import { Calendar } from "lucide-react";
 import HouseImg1 from "../assets/project5.jpg";
 import HouseImg2 from "../assets/project4.jpg";
-import HouseImg3 from "../assets/project3.jpg";
+import HouseImg3 from "../assets/Project3.jpg";
 import HouseImg4 from "../assets/project1.jpg";
 
 const rows = [
